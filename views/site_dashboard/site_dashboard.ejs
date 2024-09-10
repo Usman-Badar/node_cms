@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../partials/include') %>
+</head>
+
+<body>
+    <div class="container p-5 my-5 border">
+        <h1 id="siteName"></h1>
+        <hr />
+        <h3>Start Creating REST APIs in Node.js</h3>
+        <p>Beginner's Guide to Building RESTful APIs with Node.js: Learn to
+            Create, Deploy, and Manage APIs with Ease.</p>
+        <div class="d-flex justify-content-end">
+            <div class="btn-group">
+                <button type="button" class="btn btn-success"
+                    onclick="window.location.href='/setup/site/database'">Start
+                    Node.js Application</button>
+                <button type="button" class="btn btn-primary"
+                    onclick="window.location.href='/setup/site/database'">Create
+                    New Model</button>
+                <button type="button" class="btn btn-dark"
+                    onclick="window.location.href='/setup/site/database'">Create
+                    New File</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="models-tab"
+                    data-bs-toggle="tab" data-bs-target="#nav-models"
+                    type="button" role="tab" aria-controls="nav-models"
+                    aria-selected="true">Models</button>
+                <button class="nav-link" id="nav-profile-tab"
+                    data-bs-toggle="tab" data-bs-target="#nav-apis"
+                    type="button" role="tab" aria-controls="nav-apis"
+                    aria-selected="false">APIs</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-models"
+                role="tabpanel" aria-labelledby="models-tab">
+                <%- include('./partials/models') %>
+            </div>
+            <div class="tab-pane fade" id="nav-apis" role="tabpanel"
+                aria-labelledby="nav-apis-tab">
+                <%- include('./partials/apis') %>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const url = new URL(window.location.href);
+    const siteName = url.searchParams.get('site');
+    document.getElementById('siteName').innerText = siteName;
+</script>
+
+</html>

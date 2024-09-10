@@ -1,0 +1,154 @@
+<div class="conatiner p-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <h3>MANAGE MODELS</h3>
+        <button id="create-model" class="btn btn-sm btn-outline-dark">
+            Create Model
+        </button>
+    </div>
+    <hr />
+    <div id="model-list">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Model Name</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <td>1</td>
+                    <td>Users</td>
+                    <td>2024-06-02</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Users</td>
+                    <td>2024-06-02</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Users</td>
+                    <td>2024-06-02</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Users</td>
+                    <td>2024-06-02</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Users</td>
+                    <td>2024-06-02</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="new-model-form">
+        <form>
+            <fieldset>
+                <label>Model Name</label>
+                <input type="text" class="form-control mb-2" name="" placeholder="like Users" required />
+                <label>Table Name</label>
+                <input type="text" class="form-control mb-2" name="" placeholder="like tbl_users" required />
+
+                <table class="columns">
+                    <thead>
+                        <tr>
+                            <th>Column Name</th>
+                            <td contenteditable>id</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Properties</th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        type: 
+                                        <select>
+                                            <option value="INTEGER">INTEGER</option>
+                                            <option value="STRING">STRING</option>
+                                            <option value="FLOAT">FLOAT</option>
+                                            <option value="DOUBLE">DOUBLE</option>
+                                            <option value="DECIMAL">DECIMAL</option>
+                                            <option value="TEXT">TEXT</option>
+                                            <option value="VARCHAR">VARCHAR</option>
+                                            <option value="DATE">DATE</option>
+                                            <option value="DATEONLY">DATEONLY</option>
+                                            <option value="TIME">TIME</option>
+                                            <option value="TIMESTAMP">TIMESTAMP</option>
+                                            <option value="BOOLEAN">BOOLEAN</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        primaryKey: 
+                                        <select>
+                                            <option value="true">true</option>
+                                            <option value="false">false</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        autoIncrement: 
+                                        <select>
+                                            <option value="true">true</option>
+                                            <option value="false">false</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        allowNull: 
+                                        <select>
+                                            <option value="false">false</option>
+                                            <option value="true">true</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        unique: 
+                                        <select>
+                                            <option value="false">false</option>
+                                            <option value="true">true</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        isEmail: 
+                                        <select>
+                                            <option value="false">false</option>
+                                            <option value="true">true</option>
+                                        </select>
+                                    </li>
+                                    <li>min: <span contenteditable>0</span></li>
+                                    <li>max: <span contenteditable>1000000</span></li>
+                                    <li>defaultValue: <span contenteditable></span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <button type="button" class="btn btn-success d-block w-100">Add Column</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<style>
+    .columns {
+        border: 1px solid lightgray;
+        width: 100%;
+    }
+
+    .columns tr th {
+        width: 20%;
+        padding: 10px;
+    }
+    .columns tr td {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .columns tr td {
+        border: 1px solid #ccc;
+    }
+</style>
+
+<script src="./partials/script.js" type="text/js"></script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../partials/include') %>
+    <link rel="stylesheet" type="text/css"
+        href="/setup_site/css/database_setup.css" />
+</head>
+
+<body>
+    <form class="form" id="database_setup_form">
+        <h3 class="mb-3">Database Setup</h3>
+        <div id="notification"></div>
+        <fieldset>
+            <label>Website Name</label>
+            <input id="website_name" type="text" class="form-control mb-2" required />
+            <label>Database Host</label>
+            <input id="host" type="text" class="form-control mb-2" required />
+            <label>Database Name</label>
+            <input id="db" type="text" class="form-control mb-2" required />
+            <label>Database User</label>
+            <input id="user" type="text" class="form-control mb-2" required />
+            <label>Database Password</label>
+            <input id="password" type="password" class="form-control mb-3" required />
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-dark" id="submitBtn">Create Site</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+<script src="/setup_site/js/database_setup.js"></script>
+
+</html>

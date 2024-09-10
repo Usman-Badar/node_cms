@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('partials/include') %>
+</head>
+<body>
+    <div class="container p-5 my-5 border">
+        <h1>Create Server-Side Applications in Node.js</h1>
+        <p>Build scalable and efficient web servers with JavaScript. Master the
+            art of server-side development for real-world applications.</p>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-dark" onclick="window.location.href='/setup/site/database'">Create New Application</button>
+        </div>
+    </div>
+    <div class="container p-5 my-5 border">
+        <h1>Applications List</h1>
+        <hr />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Created Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% sites.forEach((item, index) => { %>
+                <tr class="pointer pointer-hover" onclick="openSite('<%= item.name %>')">
+                    <td><%= index + 1 %></td>
+                    <td><%= item.name %></td>
+                    <td><%= new Date(item.createdAt).toLocaleString() %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function openSite(site) {
+            window.location.href = "/site/dashboard?site=" + site;
+        }
+    </script>
+</body>
+</html>
